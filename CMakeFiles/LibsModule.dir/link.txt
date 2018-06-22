@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLibsModule.a  CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.o
+/usr/bin/ranlib libLibsModule.a
