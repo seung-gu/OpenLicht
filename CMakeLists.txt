@@ -31,7 +31,7 @@ add_executable(OpenLicht_3d
 
 if(WIN32)   
     if(OpenCV_STATIC)
-        target_compile_options(OpenLicht_3d PRIVATE "/MT$<$<CONFIG:Debug>:d>")
+        target_compile_options(OpenLicht_3d PRIVATE "/MT$<$<CONFIG:Release>:d>")
     endif()
 endif()
    

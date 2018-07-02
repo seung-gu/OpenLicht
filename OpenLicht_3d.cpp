@@ -73,11 +73,11 @@ public:
     
     void onNewData (const DepthData *data)
     {
-	clock_t startTime = clock();
+	clock_t startTime = clock();  	
 	    // this callback function will be called for every new
         // depth frame
         
-        std::lock_guard<std::mutex> lock (flagMutex);
+        //std::lock_guard<std::mutex> lock (flagMutex);
 
         // create two images which will be filled afterwards
         // each image containing one 32Bit channel
@@ -87,7 +87,7 @@ public:
         // set the image to zero
         zImagef = Scalar::all (0);
         grayImagef = Scalar::all (0);
-        
+      
         //if=>for (int x,y = 0; x,y < zImagef.rows; x--,y--) (original)
         // get gray and depth information from picoflexx camera
 		int k = 0;
@@ -97,7 +97,7 @@ public:
 			float *grayRowPtr = grayImagef.ptr<float> (y);
 			for (int x = zImagef.cols-1; x >=0 ; x--, k++)
 			{
-				auto curPoint = data->points.at (k);
+				auto curPoint = data->points[k];
 				if (curPoint.depthConfidence > 0)
 				{
 					if(curPoint.z < MAX_DEPTH){
@@ -107,25 +107,10 @@ public:
 				}
 			}
 		}
+	
 		preProcessing();
-		/*
-        //create images to store the 8Bit version (some OpenCV functions may only work on 8Bit images)
-        //normalize zImage(float) to gray space with 0~255(uchar) 
-        myDepthNormalize(zImagef, depthGray); 
-      //imshow("DepthGray", depthGray);         
-    
-		//normalize grayImage(float) to 8Bit gray scale Image in avg scale 
-        myGrayNormalize(grayImagef, grayImage);	//regulate the amount of light (gray)   
-        //imshow ("Gray", grayImage);
-       
-        //set a threshold of the amount gray Image value(light)
-        threshold(grayImage, binaryImage, 127, 255, THRESH_BINARY); //set the amount of light (gray)
-        //imshow("BinaryImage", binaryImage);
-      
-        //8bit DepthGray + binary image        
-        myMergeFrames(depthGray, binaryImage, maskDepthGray);
-        //imshow("MaskDepthGray", maskDepthGray);
-		*/
+	
+		
 		//trim only hand ROI by depth value
 		Mat handROI;		//with wrist
 		myGetHandROI(maskDepthGray, handROI);			
@@ -135,7 +120,7 @@ public:
 		myGetContour(handROI, contour, handROI);		
 		//imshow("Contour", contour);
 		//imshow("handROI", handROI);
-
+	
         //get a center point of the hand and draw a circle
 		getHandCenter(handROI);  			////
 		
@@ -147,10 +132,10 @@ public:
 		sendingData();
 	
 		BeepSound::beepMode();
-		
 	clock_t endTime = clock();
 	double codeExcuteTime = ((double)(endTime-startTime))/CLOCKS_PER_SEC;	
-	cout<<codeExcuteTime*1000.0<<endl;  	
+	cout<<codeExcuteTime*1000.0<<endl;		
+		
 	}
 	
 	void preProcessing()	// grayNormalize+depthNormalize+mergedFrames
