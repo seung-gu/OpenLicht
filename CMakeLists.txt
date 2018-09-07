@@ -27,6 +27,7 @@ add_executable(OpenLicht_3d
    	OpenLicht_3d.cpp
 	BeepSound.cpp
 	Bluetooth.cpp
+	Bluetooth_server.cpp
    )
 
 if(WIN32)   

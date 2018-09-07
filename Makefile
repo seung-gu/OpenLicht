@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
+CMAKE_SOURCE_DIR = /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
+CMAKE_BINARY_DIR = /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/CMakeFiles/progress.marks
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles 0
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/CMakeFiles/progress.marks
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/clean
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/preinstall
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/preinstall
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 cpp/OpenLicht/CMakeFiles/LibsModule.dir/rule:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/CMakeFiles/LibsModule.dir/rule
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/CMakeFiles/LibsModule.dir/rule
 .PHONY : cpp/OpenLicht/CMakeFiles/LibsModule.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ LibsModule: cpp/OpenLicht/CMakeFiles/LibsModule.dir/rule
 
 # fast build rule for target.
 LibsModule/fast:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/build
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/build
 .PHONY : LibsModule/fast
 
 # Convenience name for target.
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/rule:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/rule
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f CMakeFiles/Makefile2 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/rule
 .PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/rule
 
 # fast build rule for target.
 OpenLicht_3d/fast:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build
 .PHONY : OpenLicht_3d/fast
 
 BeepSound.o: BeepSound.cpp.o
@@ -146,7 +146,7 @@ BeepSound.o: BeepSound.cpp.o
 
 # target to build an object file
 BeepSound.cpp.o:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o
 .PHONY : BeepSound.cpp.o
 
 BeepSound.i: BeepSound.cpp.i
@@ -155,7 +155,7 @@ BeepSound.i: BeepSound.cpp.i
 
 # target to preprocess a source file
 BeepSound.cpp.i:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i
 .PHONY : BeepSound.cpp.i
 
 BeepSound.s: BeepSound.cpp.s
@@ -164,7 +164,7 @@ BeepSound.s: BeepSound.cpp.s
 
 # target to generate assembly for a file
 BeepSound.cpp.s:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s
 .PHONY : BeepSound.cpp.s
 
 Bluetooth.o: Bluetooth.cpp.o
@@ -173,7 +173,7 @@ Bluetooth.o: Bluetooth.cpp.o
 
 # target to build an object file
 Bluetooth.cpp.o:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o
 .PHONY : Bluetooth.cpp.o
 
 Bluetooth.i: Bluetooth.cpp.i
@@ -182,7 +182,7 @@ Bluetooth.i: Bluetooth.cpp.i
 
 # target to preprocess a source file
 Bluetooth.cpp.i:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i
 .PHONY : Bluetooth.cpp.i
 
 Bluetooth.s: Bluetooth.cpp.s
@@ -191,8 +191,35 @@ Bluetooth.s: Bluetooth.cpp.s
 
 # target to generate assembly for a file
 Bluetooth.cpp.s:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s
 .PHONY : Bluetooth.cpp.s
+
+Bluetooth_server.o: Bluetooth_server.cpp.o
+
+.PHONY : Bluetooth_server.o
+
+# target to build an object file
+Bluetooth_server.cpp.o:
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o
+.PHONY : Bluetooth_server.cpp.o
+
+Bluetooth_server.i: Bluetooth_server.cpp.i
+
+.PHONY : Bluetooth_server.i
+
+# target to preprocess a source file
+Bluetooth_server.cpp.i:
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.i
+.PHONY : Bluetooth_server.cpp.i
+
+Bluetooth_server.s: Bluetooth_server.cpp.s
+
+.PHONY : Bluetooth_server.s
+
+# target to generate assembly for a file
+Bluetooth_server.cpp.s:
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.s
+.PHONY : Bluetooth_server.cpp.s
 
 OpenLicht_3d.o: OpenLicht_3d.cpp.o
 
@@ -200,8 +227,8 @@ OpenLicht_3d.o: OpenLicht_3d.cpp.o
 
 # target to build an object file
 OpenLicht_3d.cpp.o:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.o
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.o
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o
 .PHONY : OpenLicht_3d.cpp.o
 
 OpenLicht_3d.i: OpenLicht_3d.cpp.i
@@ -210,8 +237,8 @@ OpenLicht_3d.i: OpenLicht_3d.cpp.i
 
 # target to preprocess a source file
 OpenLicht_3d.cpp.i:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.i
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i
 .PHONY : OpenLicht_3d.cpp.i
 
 OpenLicht_3d.s: OpenLicht_3d.cpp.s
@@ -220,8 +247,8 @@ OpenLicht_3d.s: OpenLicht_3d.cpp.s
 
 # target to generate assembly for a file
 OpenLicht_3d.cpp.s:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.s
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/LibsModule.dir/build.make cpp/OpenLicht/CMakeFiles/LibsModule.dir/OpenLicht_3d.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s
 .PHONY : OpenLicht_3d.cpp.s
 
 # Help Target
@@ -240,6 +267,9 @@ help:
 	@echo "... Bluetooth.o"
 	@echo "... Bluetooth.i"
 	@echo "... Bluetooth.s"
+	@echo "... Bluetooth_server.o"
+	@echo "... Bluetooth_server.i"
+	@echo "... Bluetooth_server.s"
 	@echo "... OpenLicht_3d.o"
 	@echo "... OpenLicht_3d.i"
 	@echo "... OpenLicht_3d.s"
@@ -254,6 +284,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

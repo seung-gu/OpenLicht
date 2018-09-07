@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale.hpp
 royale/CameraManager.hpp
 -
 royale/ICameraDevice.hpp
@@ -16,11 +16,11 @@ royale/Status.hpp
 royale/String.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CallbackData.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CallbackData.hpp
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CameraAccessLevel.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CameraAccessLevel.hpp
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CameraManager.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/CameraManager.hpp
 memory
 -
 royale/Definitions.hpp
@@ -34,9 +34,9 @@ royale/String.hpp
 royale/TriggerMode.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Definitions.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Definitions.hpp
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/DepthData.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/DepthData.hpp
 royale/Definitions.hpp
 -
 royale/Vector.hpp
@@ -50,7 +50,7 @@ cstdint
 chrono
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/DepthImage.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/DepthImage.hpp
 royale/Definitions.hpp
 -
 royale/Vector.hpp
@@ -62,9 +62,9 @@ memory
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ExposureMode.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ExposureMode.hpp
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ICameraDevice.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ICameraDevice.hpp
 memory
 -
 royale/Status.hpp
@@ -104,25 +104,25 @@ royale/CameraAccessLevel.hpp
 royale/StreamId.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IDepthDataListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IDepthDataListener.hpp
 string
 -
 royale/DepthData.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IDepthImageListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IDepthImageListener.hpp
 string
 -
 royale/DepthImage.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IEventListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IEventListener.hpp
 royale/Definitions.hpp
 -
 memory
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExposureListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExposureListener.hpp
 royale/Vector.hpp
 -
 royale/Definitions.hpp
@@ -132,7 +132,7 @@ royale/StreamId.hpp
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExposureListener2.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExposureListener2.hpp
 royale/Definitions.hpp
 -
 royale/StreamId.hpp
@@ -140,7 +140,7 @@ royale/StreamId.hpp
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExtendedData.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExtendedData.hpp
 royale/Definitions.hpp
 -
 royale/RawData.hpp
@@ -158,19 +158,19 @@ vector
 chrono
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExtendedDataListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IExtendedDataListener.hpp
 string
 -
 royale/IExtendedData.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IIRImageListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IIRImageListener.hpp
 string
 -
 royale/IRImage.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IRImage.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IRImage.hpp
 royale/Definitions.hpp
 -
 royale/Vector.hpp
@@ -182,17 +182,17 @@ memory
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IRecordStopListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IRecordStopListener.hpp
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ISparsePointCloudListener.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ISparsePointCloudListener.hpp
 string
 -
 royale/SparsePointCloud.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IntermediateData.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/IntermediateData.hpp
 royale/Definitions.hpp
 -
 royale/DepthData.hpp
@@ -208,7 +208,7 @@ cstdint
 chrono
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Iterator.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Iterator.hpp
 iterator
 -
 cstddef
@@ -216,13 +216,13 @@ cstddef
 type_traits
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/LensParameters.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/LensParameters.hpp
 royale/Pair.hpp
 -
 royale/Vector.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Pair.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Pair.hpp
 royale/Definitions.hpp
 -
 cstddef
@@ -234,7 +234,7 @@ ostream
 type_traits
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ProcessingFlag.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/ProcessingFlag.hpp
 royale/Variant.hpp
 -
 royale/Vector.hpp
@@ -242,7 +242,7 @@ royale/Vector.hpp
 royale/String.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/RawData.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/RawData.hpp
 royale/Definitions.hpp
 -
 royale/Vector.hpp
@@ -258,7 +258,7 @@ cstdint
 chrono
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/SparsePointCloud.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/SparsePointCloud.hpp
 royale/Definitions.hpp
 -
 royale/Vector.hpp
@@ -270,15 +270,15 @@ memory
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Status.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Status.hpp
 royale/String.hpp
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/StreamId.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/StreamId.hpp
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/String.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/String.hpp
 royale/Definitions.hpp
 -
 royale/Iterator.hpp
@@ -300,9 +300,9 @@ memory
 stdint.h
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/TriggerMode.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/TriggerMode.hpp
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Variant.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Variant.hpp
 royale/Definitions.hpp
 -
 limits
@@ -312,7 +312,7 @@ float.h
 cstdint
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Vector.hpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/include/royale/Vector.hpp
 royale/Definitions.hpp
 -
 royale/Iterator.hpp
@@ -334,19 +334,21 @@ royale/Pair.hpp
 cassert
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp
 BeepSound.h
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
 softTone.h
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp
 Bluetooth.h
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
+Bluetooth_server.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.h
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
 sys/socket.h
 -
 bluetooth/bluetooth.h
@@ -356,7 +358,23 @@ bluetooth/rfcomm.h
 unistd.h
 -
 
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.cpp
+Bluetooth.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
+Bluetooth_server.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.h
+
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.h
+stdio.h
+-
+stdlib.h
+-
+bluetooth/sdp.h
+-
+bluetooth/sdp_lib.h
+-
+
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp
 royale.hpp
 -
 iostream
@@ -368,9 +386,9 @@ opencv2/opencv.hpp
 sample_utils/PlatformResources.hpp
 -
 Bluetooth.h
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.h
 BeepSound.h
-/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
+/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.h
 wiringPi.h
 -
 softTone.h

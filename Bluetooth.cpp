@@ -1,4 +1,5 @@
 #include "Bluetooth.h"
+#include "Bluetooth_server.h"
 
 int Bluetooth::s, status;
 
@@ -6,11 +7,10 @@ void Bluetooth::setBluetooth()
 {
 	struct sockaddr_rc addr = {0};
 	
-	//char dest[18] = "98:D3:32:20:A2:AE";
-	char dest[18] = "98:D3:32:21:2E:EA";
-	
-	s = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM);
-	
+	//char dest[18] = "98:D3:32:21:2E:EA";	//bluetooth module
+	char dest[18] = "F8:63:3F:1D:EF:5B";	//PC
+	s = Bluetooth_server::init_server();	//PC paring	
+//	s = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM);	//bluetooth module paring
 	addr.rc_family = AF_BLUETOOTH;
 	addr.rc_channel = (uint8_t) 1;
 	str2ba(dest, &addr.rc_bdaddr);
@@ -25,7 +25,7 @@ void Bluetooth::transmitting(unsigned char* _data, int size)
 	tx_data[size] = END_BIT;	
 	
 	status = write(s, tx_data, size+1);
-	
+
 	if(status<0) perror("ERROR");
 }
 void Bluetooth::closeBluetooth()

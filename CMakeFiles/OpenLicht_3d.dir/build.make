@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
+CMAKE_SOURCE_DIR = /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
+CMAKE_BINARY_DIR = /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples
 
 # Include any dependencies generated for this target.
 include cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/depend.make
@@ -59,16 +59,16 @@ include cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/flags.make
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/flags.make
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o: cpp/OpenLicht/OpenLicht_3d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o -c /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o -c /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp > CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp > CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.i
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp -o CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/OpenLicht_3d.cpp -o CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.s
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o.requires:
 
@@ -83,16 +83,16 @@ cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o.provides.build: cpp
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/flags.make
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o: cpp/OpenLicht/BeepSound.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o -c /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o -c /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp > CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp > CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.i
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp -o CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/BeepSound.cpp -o CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.s
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o.requires:
 
@@ -107,16 +107,16 @@ cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o.provides.build: cpp/Op
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/flags.make
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o: cpp/OpenLicht/Bluetooth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o -c /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o -c /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp > CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp > CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.i
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp -o CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth.cpp -o CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.s
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o.requires:
 
@@ -129,11 +129,36 @@ cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o.provides: cpp/OpenLich
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o.provides.build: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o
 
 
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/flags.make
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o: cpp/OpenLicht/Bluetooth_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o -c /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.cpp
+
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.i"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.cpp > CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.i
+
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.s"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/Bluetooth_server.cpp -o CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.s
+
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.requires:
+
+.PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.requires
+
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.provides: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.requires
+	$(MAKE) -f cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.provides.build
+.PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.provides
+
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.provides.build: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o
+
+
 # Object files for target OpenLicht_3d
 OpenLicht_3d_OBJECTS = \
 "CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o" \
 "CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o" \
-"CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o"
+"CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o" \
+"CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o"
 
 # External object files for target OpenLicht_3d
 OpenLicht_3d_EXTERNAL_OBJECTS =
@@ -141,6 +166,7 @@ OpenLicht_3d_EXTERNAL_OBJECTS =
 cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o
 cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o
 cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o
+cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o
 cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build.make
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_stitching.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_superres.so.3.4.0
@@ -151,6 +177,7 @@ cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_bioinspired.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_ccalib.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_dpm.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_face.so.3.4.0
+cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_freetype.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_fuzzy.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_img_hash.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_line_descriptor.so.3.4.0
@@ -186,8 +213,8 @@ cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_objdetect.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_imgproc.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: /usr/local/lib/libopencv_core.so.3.4.0
 cpp/OpenLicht/OpenLicht_3d: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable OpenLicht_3d"
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenLicht_3d.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable OpenLicht_3d"
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenLicht_3d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build: cpp/OpenLicht/OpenLicht_3d
@@ -197,14 +224,15 @@ cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/build: cpp/OpenLicht/OpenLicht_3d
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/requires: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/OpenLicht_3d.cpp.o.requires
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/requires: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/BeepSound.cpp.o.requires
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/requires: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth.cpp.o.requires
+cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/requires: cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/Bluetooth_server.cpp.o.requires
 
 .PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/requires
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/clean:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && $(CMAKE_COMMAND) -P CMakeFiles/OpenLicht_3d.dir/cmake_clean.cmake
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht && $(CMAKE_COMMAND) -P CMakeFiles/OpenLicht_3d.dir/cmake_clean.cmake
 .PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/clean
 
 cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/depend:
-	cd /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht /home/pi/Downloads/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht /home/pi/Downloads/OpenLicht/libroyale-3.17.0.56-LINUX-arm-32Bit/samples/cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cpp/OpenLicht/CMakeFiles/OpenLicht_3d.dir/depend
 
