@@ -23,7 +23,6 @@ bool displayOn = false;		//extern -> main.cpp
 
 void MyListener::onNewData (const DepthData *data)
 {
-clock_t startTime = clock(); 
 	// this callback function will be called for every new
 	// depth frame
 	
@@ -81,10 +80,7 @@ clock_t startTime = clock();
 		
 	infoOnDisplay(fingers);
 	
-//cout<<1<<endl;	//success
-clock_t endTime = clock();
-double codeExcuteTime = ((double)(endTime-startTime))/CLOCKS_PER_SEC;	
-//cout<<codeExcuteTime*1000.0<<endl;
+	cout<<1<<endl;	//success
 }
 	
 	
@@ -94,8 +90,8 @@ void MyListener::preProcessing()	// grayNormalize+depthNormalize+mergedFrames
 	maskDepthGray = Scalar::all (255);
 	
 	float pow_coef = 1.9f;
-	float average_gray = 26.0f;
-	float margin_plus = 35.0f;
+	float average_gray = 26.0f;	//average value of gray
+	float margin_plus = 35.0f;	//tolerance
 	float margin_minus = 15.0f;
 	
 	for (int y = 0; y < grayImagef.rows; y++)
@@ -165,8 +161,8 @@ int MyListener::myGetHistogram(InputArray _src, OutputArray _hist)
 	// but these ranges could be modified depending on the size of hand 
 	int max_x = 255, max_y = -1;	
 	int num_sample = 5;
-	int hand_size_range[] = {160, 360};	
-	int std_dev_range[] = {15, 70};
+	int hand_size_range[] = {160, 360};			// <------ could be customized
+	int std_dev_range[] = {15, 70};				// <------ could be customized
 
 	for(int x = histSize*MAX_DISTANCE-num_sample/2 - 1 ; x >= num_sample/2; x--){
 		// hand size is in inverse proportion to depth value 
@@ -218,7 +214,8 @@ int MyListener::myGetHistogram(InputArray _src, OutputArray _hist)
 	
 	return (max_x*255)/histSize;
 }
-	
+
+// set the range by z distance (min ~ max)
 void MyListener::myDepthROI(InputArray _src, OutputArray _dst, int min, int max)
 {
 	Mat src = _src.getMat();
@@ -240,7 +237,7 @@ void MyListener::myDepthROI(InputArray _src, OutputArray _dst, int min, int max)
 	}
 }
 
-
+//get contour of hand and fill in 
 void MyListener::myGetContour(InputArray _src, OutputArray _dst, OutputArray _fill)
 {
 	Mat src = _src.getMat();
@@ -263,24 +260,26 @@ void MyListener::myGetContour(InputArray _src, OutputArray _dst, OutputArray _fi
 	}
 }
 
-
+//get hand center
 void MyListener::getHandCenter(InputArray _mask)
 {
 	Mat mask = _mask.getMat();
 	
 	Mat dst;
-	distanceTransform(mask, dst, CV_DIST_L2, 3); 
+	distanceTransform(mask, dst, CV_DIST_L2, 3); //distance transform
 		
-	int numMarking = 7;
-	int minIdx[2];    //idx[0] : y, idx[1] : x
-	int palmSizeRange[] = {1500, 2600};
+	int numMarking = 7;	// 
+	int minIdx[2];    	// idx[0] : y, idx[1] : x
+	int palmSizeRange[] = {1500, 2600};		// <------ could be customized (hand size)
 	
 	vHand.clear();
 	
-	//if arms are too big, then arms could be detected => to avoid this, use only the uppermost point
+	//if arms are too big, then arm could be also detected 
+	// => to avoid this, use only the uppermost point
 	for(int i=0; i<numMarking; i++){
 		double radius;
-		minMaxIdx(dst, NULL, &radius, NULL, minIdx, mask);   //get maximum point and size by 32 float value
+		//get maximum point and size by 32 float value
+		minMaxIdx(dst, NULL, &radius, NULL, minIdx, mask);   
 		
 		Point handPos = Point(minIdx[1],minIdx[0]);
 		int distance = maskDepthGray.at<uchar>(minIdx[0],minIdx[1]);
@@ -290,6 +289,7 @@ void MyListener::getHandCenter(InputArray _mask)
 		double erase;
 		
 		if(palmSizeRange[0]<palmSize && palmSize<palmSizeRange[1]){	
+			// to avoid to pick a second greatest value just near the greatest value
 			erase = radius*2.0;			
 			vHand.push_back(Hand(handPos, radius, fdistance));	
 		}else{
@@ -307,15 +307,6 @@ void MyListener::getHandCenter(InputArray _mask)
 
 
 
-
-
-	
-	
-	
-
-
-
-	
 int MyListener::countingFingers(InputArray _src, OutputArray _dst)
 {
 	if(vHand.empty()) return -1;
@@ -325,9 +316,8 @@ int MyListener::countingFingers(InputArray _src, OutputArray _dst)
 	Mat dst = _dst.getMat();
 
 	Point center(vHand.at(0).pos);
-	int distance = vHand.at(0).distance; 
-
-	//Mat cImg(src.size(), CV_8U, Scalar(0));		//
+	
+	//Mat cImg(src.size(), CV_8U, Scalar(0));		
 	//circle(cImg, center, cvRound(vHand.at(handNum).palmRadius * circleScale), Scalar(255));	//
 	
 	vector<Point> v_circle;
@@ -336,7 +326,7 @@ int MyListener::countingFingers(InputArray _src, OutputArray _dst)
 	vector<Point> v_point;		//finger position
 	vector<double> v_deg;		//finger angle between finger position and palm center
 
-	//cImg = src&cImg;	//
+	//cImg = src&cImg;	
 
 	int fingerWidth = 0;
 	Point start_pt(0,0);	//rising point
@@ -355,8 +345,9 @@ int MyListener::countingFingers(InputArray _src, OutputArray _dst)
 			fingerWidth++;
 		}		
 		else if(src.at<uchar>(pre_pt.y, pre_pt.x)==255 && src.at<uchar>(pt.y, pt.x)==0){
-		
-			if(fingerWidth > 5 && fingerWidth < 35){
+			
+			// finger width (5 ~ 35) <------ could be customized
+			if(fingerWidth > 5 && fingerWidth < 35){	
 				Point midPt;
 				if(start_pt == Point(0,0)) 	midPt = pre_pt;
 				else 						midPt = (start_pt + pre_pt)/2;
@@ -370,7 +361,7 @@ int MyListener::countingFingers(InputArray _src, OutputArray _dst)
 		}		
 	}
 
-	//number of fingers
+	//counting number of fingers
 	int fingerCount = (int)v_deg.size();			
 	
 	// counting points on arm
@@ -454,31 +445,32 @@ void MyListener::midPointCircle(vector<Point>& v_circle, Size size)
 }
 
 	
-	
-
 
 void MyListener::detectionControlMode(int fingerCount)
 {
 
 	if(fingerCount >= 0 && fingerCount <= 5 && !outOfRange())	//detected
 		handDetected();
-	else 										//non detected
+	else 														//non detected
 		handNonDetected();
 }
 
 bool MyListener::outOfRange()
 {
 	if(vHand.empty()) return true;
+	
+	// x_tol, y_tol are the range of boundary
+	// this value is changing depending on the distance
 	int dist = vHand.at(0).distance;
 	int x = vHand.at(0).pos.x;
 	int y = vHand.at(0).pos.y;
-	int x_tol = (int)((float)zImagef.cols * (float)dist/255.0f );
+	int x_tol = (int)((float)zImagef.cols * (float)dist/255.0f );	//tolerance
 	int y_tol = (int)((float)zImagef.rows * (float)dist/255.0f / 2.0);
 	
 	if( (x>x_tol && x<zImagef.cols-x_tol) && (y>y_tol && y<(zImagef.rows-y_tol)) )
-		return false;
+		return false;	//not out of range
 	else
-		return true;
+		return true;	//out of range
 }
 
 void MyListener::handDetected()
@@ -488,13 +480,16 @@ void MyListener::handDetected()
 	{	
 		if(readyCount < 5)
 		{
-		// when the hand is moving away from camera,
-		// it starts counting and being ready to run
+			
+		// when the hand is getting further from camera,
+		// it starts counting and being ready to run 
 			if(vHand.empty()) return;
+			
+			int moving_speed = +2;
 			
 			static int pre_distance = 255;
 			
-			if(pre_distance+2 < vHand.at(0).distance)
+			if(pre_distance+moving_speed < vHand.at(0).distance)
 				readyCount++;
 			else
 				readyCount = 0;
@@ -541,7 +536,9 @@ void MyListener::runMode()
 	
 	if(readyGauge != READY)
 	{
-		readyGauge = READY;
+		// when the hand comes back into the range during runMode,
+		// readyGauge is quickly updated full
+		readyGauge = READY;	
 		
 		//make vector emptied
 		vHandPos.clear();
@@ -549,8 +546,8 @@ void MyListener::runMode()
 		vRadius.clear();
 	}
 	
-	//vector push_back
-	if(vHand.empty()) return;
+	// x_tol, y_tol are the range of boundary
+	// this value is changing depending on the distance
 	int dist = vHand.at(0).distance;
 	float radius = (float)(255-dist)/10.0f;	//distance
 	
@@ -558,10 +555,9 @@ void MyListener::runMode()
 	int y_tol = (int)((float)zImagef.rows * (float)dist/255.0f / 2.0);
 	
 	
-	//avoid closed at boundaries
-	
+	//vector push_back
 	if( !outOfRange() ){
-		if( vHandPos.size() < 10 ){	// when HandPos vector has less than 10 arrays 
+		if( vHandPos.size() < max_vHand_arr ){	// when HandPos vector has less than 10 arrays 
 			vHandPos.push_back(vHand.at(0).pos);
 			vRadius.push_back(radius);
 			vHandPos_z.push_back(dist);
@@ -574,7 +570,6 @@ void MyListener::runMode()
 			
 			vRadius.erase(vRadius.begin());
 			vRadius.push_back(radius);
-			
 		}
 	}
 
@@ -595,9 +590,11 @@ void MyListener::direction()
 {	
 	//movement direction
 	int xCt = 0, yCt = 0;
-	int start_pt = 1, last_pt = 4;
-	Point difPos = vHandPos[vHandPos.size()-start_pt] - vHandPos[vHandPos.size()-last_pt];
-	for(int i=vHandPos.size()-start_pt; i>vHandPos.size()-last_pt; i--)
+	// compare start_pt of vHandPos array with last_pt of it 
+	int test_size = 5;	
+	// calculate how many pixels the position moved between start_pt and last_pt
+	Point difPos = vHandPos[vHandPos.size()-1] - vHandPos[vHandPos.size()-test_size-1];
+	for(int i=vHandPos.size()-1; i>vHandPos.size()-test_size-1; i--)
 	{
 		if(vHandPos[i].x - vHandPos[i-1].x > 0) xCt++;	//moving leftward
 		else if(vHandPos[i].x - vHandPos[i-1].x < 0) xCt--;	  //rightward
@@ -618,24 +615,26 @@ void MyListener::direction()
 	int x_dif_range = zImagef.cols/2 - x_tol;
 	int y_dif_range = zImagef.rows/2 - y_tol;
 	
+	float accuracy = 0.6; // 60% accuracy rate 				<------ could be customized
+	int success_point = cvRound((float)test_size * accuracy);
+	// e.g.) regarded as successful, if xCt or yCt is over than test_size*accuracy
 	if(abs(difPos.x) > x_dif_range/2 && abs(difPos.y) < y_dif_range)
 	{
-		if(xCt>=3){
+		if(xCt >= success_point){
 			directionMsg = MSG_RIGHT;
-			cout<<"Right"<<endl;
+			//cout<<"Right"<<endl;
 		}
-		else if(xCt<=-3){
+		else if(xCt <= -success_point){
 			directionMsg = MSG_LEFT;
-			cout<<"Left"<<endl;
+			//cout<<"Left"<<endl;
 		}
 	}
 	else if(abs(difPos.x) < x_dif_range/2 && abs(difPos.y) > y_dif_range/2)
 	{
-		if(yCt>=3){
+		if(yCt >= success_point-1){
 			directionMsg = MSG_DOWN;
-			cout<<"Down"<<endl;
+			//cout<<"Down"<<endl;
 		}
-		//else if(yCt<=-3) cout<<"Up"<<endl;
 	}	
 }
 
@@ -645,7 +644,7 @@ void MyListener::keyMessageTX()
 	digitalWrite(KEY_RIGHT, HIGH);	
 	digitalWrite(KEY_DOWN, HIGH);	
 	
-	softToneWrite(BEEP,0);			//// turn off after one frame
+	softToneWrite(BEEP,0);			// turn off after one frame
 	
 	static bool pre_run_flag;
 	if(!pre_run_flag && run_flag) softToneWrite(BEEP, 5120);
@@ -655,7 +654,7 @@ void MyListener::keyMessageTX()
 	{
 	case MSG_LEFT:
 		digitalWrite(KEY_LEFT, LOW);
-		softToneWrite(BEEP,5120);	////
+		softToneWrite(BEEP,5120);	
 		break;
 	case MSG_RIGHT:
 		digitalWrite(KEY_RIGHT, LOW);
@@ -694,7 +693,7 @@ void MyListener::infoOnDisplay(int fingers)
 		
 		pre_directionMsg = directionMsg;
 		directionMsg = 0;
-		msgGauge = 20;	//turn on message "LEFT", "RIGHT", "DOWN" for 20 frames
+		msgGauge = 20;	//to display message "LEFT", "RIGHT", "DOWN" for 20 frames
 	}
 	else if(pre_directionMsg)
 	{

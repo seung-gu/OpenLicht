@@ -54,7 +54,8 @@ using namespace cv;
 // which ABI they use, it depends on which version of the compiler was used.
 
 #define MAX_DEPTH 1.0 		// fixed value
-#define MAX_DISTANCE 0.75 	// this can be customized (75cm) (real hand detection range)
+// this can be customized (75cm) (real hand detection range, in myGetHistogram function)
+#define MAX_DISTANCE 0.75 	
 #define READY 20
 
 enum PINS{PINLEFT=21, PINUP, PINPRESS, PINDOWN, PINRIGHT, KEY3=27, KEY2};
@@ -105,7 +106,9 @@ private:
 
 // ready mode, run mode, direction decision, transmit message	
 private:
-	int directionMsg;
+	int directionMsg = 0;
+	
+	const int max_vHand_arr = 10;	// <------ could be customized
 	vector<Point> vHandPos;
 	vector<int> vHandPos_z;
 	vector<float> vRadius;

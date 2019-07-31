@@ -171,8 +171,8 @@ void startPageMode(void)
 		
 	printf("state : %d\n", mode_state);
 	
-	batteryDisplay();
-	chargingDisplay();
+	//batteryDisplay();
+	//chargingDisplay();
 	
 	display.display();
 	
