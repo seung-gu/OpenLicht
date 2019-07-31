@@ -111,30 +111,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LibsKeyMotion_v1b
+# Target rules for targets named LibsKeyMotion_v2a
 
 # Build rule for target.
-LibsKeyMotion_v1b: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LibsKeyMotion_v1b
-.PHONY : LibsKeyMotion_v1b
+LibsKeyMotion_v2a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LibsKeyMotion_v2a
+.PHONY : LibsKeyMotion_v2a
 
 # fast build rule for target.
-LibsKeyMotion_v1b/fast:
-	$(MAKE) -f cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/LibsKeyMotion_v1b.dir/build.make cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/LibsKeyMotion_v1b.dir/build
-.PHONY : LibsKeyMotion_v1b/fast
+LibsKeyMotion_v2a/fast:
+	$(MAKE) -f cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/LibsKeyMotion_v2a.dir/build.make cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/LibsKeyMotion_v2a.dir/build
+.PHONY : LibsKeyMotion_v2a/fast
 
 #=============================================================================
-# Target rules for targets named KeyMotion_v1b
+# Target rules for targets named KeyMotion_v2a
 
 # Build rule for target.
-KeyMotion_v1b: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 KeyMotion_v1b
-.PHONY : KeyMotion_v1b
+KeyMotion_v2a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KeyMotion_v2a
+.PHONY : KeyMotion_v2a
 
 # fast build rule for target.
-KeyMotion_v1b/fast:
-	$(MAKE) -f cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/KeyMotion_v1b.dir/build.make cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/KeyMotion_v1b.dir/build
-.PHONY : KeyMotion_v1b/fast
+KeyMotion_v2a/fast:
+	$(MAKE) -f cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/KeyMotion_v2a.dir/build.make cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/KeyMotion_v2a.dir/build
+.PHONY : KeyMotion_v2a/fast
+
+#=============================================================================
+# Target rules for targets named LibsKeyMotion_v1c
+
+# Build rule for target.
+LibsKeyMotion_v1c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LibsKeyMotion_v1c
+.PHONY : LibsKeyMotion_v1c
+
+# fast build rule for target.
+LibsKeyMotion_v1c/fast:
+	$(MAKE) -f cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/LibsKeyMotion_v1c.dir/build.make cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/LibsKeyMotion_v1c.dir/build
+.PHONY : LibsKeyMotion_v1c/fast
+
+#=============================================================================
+# Target rules for targets named KeyMotion_v1c
+
+# Build rule for target.
+KeyMotion_v1c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KeyMotion_v1c
+.PHONY : KeyMotion_v1c
+
+# fast build rule for target.
+KeyMotion_v1c/fast:
+	$(MAKE) -f cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/KeyMotion_v1c.dir/build.make cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/KeyMotion_v1c.dir/build
+.PHONY : KeyMotion_v1c/fast
 
 # Help Target
 help:
@@ -144,8 +170,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... LibsKeyMotion_v1b"
-	@echo "... KeyMotion_v1b"
+	@echo "... LibsKeyMotion_v2a"
+	@echo "... KeyMotion_v2a"
+	@echo "... LibsKeyMotion_v1c"
+	@echo "... KeyMotion_v1c"
 .PHONY : help
 
 

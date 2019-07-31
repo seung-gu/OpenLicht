@@ -34,7 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v1b/cmake_install.cmake")
+  include("/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v2a/cmake_install.cmake")
+  include("/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v1c/cmake_install.cmake")
 
 endif()
 

@@ -23,7 +23,7 @@ CMAKE_BUILD_WITH_INSTALL_RPATH:BOOL=OFF
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-CMAKE_CXX_FLAGS:STRING= -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion
+CMAKE_CXX_FLAGS:STRING= -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion -fPIC -std=c++0x -Wall -Wconversion
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -153,11 +153,20 @@ KeyMotion_v1c_BINARY_DIR:STATIC=/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/K
 //Value Computed by CMake
 KeyMotion_v1c_SOURCE_DIR:STATIC=/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v1c
 
+//Value Computed by CMake
+KeyMotion_v2a_BINARY_DIR:STATIC=/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v2a
+
+//Value Computed by CMake
+KeyMotion_v2a_SOURCE_DIR:STATIC=/home/pi/ProjectKeyMotion/KeyMotion/source/cpp/KeyMotion/KeyMotion_v2a
+
 //Dependencies for the target
 LibsKeyMotion_v1b_LIB_DEPENDS:STATIC=general;-lwiringPi;general;-lbcm2835;general;-lX11;general;-lXtst;general;-lbluetooth;general;-L/usr/;
 
 //Dependencies for the target
 LibsKeyMotion_v1c_LIB_DEPENDS:STATIC=general;-lwiringPi;general;-lbcm2835;general;-lX11;general;-lXtst;general;-lbluetooth;general;-L/usr/;
+
+//Dependencies for the target
+LibsKeyMotion_v2a_LIB_DEPENDS:STATIC=general;-lwiringPi;general;-lbcm2835;general;-lX11;general;-lXtst;general;-lbluetooth;general;-L/usr/;
 
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
@@ -261,7 +270,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.7
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS

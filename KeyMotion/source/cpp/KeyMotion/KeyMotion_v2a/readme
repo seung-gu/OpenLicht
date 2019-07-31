@@ -1,0 +1,11 @@
+
+## version compatibility
+
+
+#gcc version (Raspbian 6.3.0-18+rpi1+deb9u1)
+
+#cmake version 3.7.2
+
+#royale library version 3.17.0.56 for LINUX ARM
+
+#OpenCV library version 3.4.0

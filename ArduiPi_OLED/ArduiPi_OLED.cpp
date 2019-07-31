@@ -965,5 +965,8 @@ void ArduiPi_OLED::clearDisplay(void)
   memset(poledbuff, 0, oled_buff_size);
 }
 
-
+void ArduiPi_OLED::setBuffer(int x, int y, unsigned int value)
+{
+	poledbuff[x + oled_width*y] = value;
+}
 

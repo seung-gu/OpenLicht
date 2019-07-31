@@ -190,6 +190,9 @@ class ArduiPi_OLED : public Adafruit_GFX
 
   void drawPixel(int16_t x, int16_t y, uint16_t color);
 
+	//customized
+  void setBuffer(int x, int y, unsigned int value);
+
   private:
   uint8_t *poledbuff; // Pointer to OLED data buffer in memory
   int8_t _i2c_addr, dc, rst, cs;
@@ -206,8 +209,6 @@ class ArduiPi_OLED : public Adafruit_GFX
   void fastI2Cwrite(uint8_t c);
   void fastI2Cwrite(char* tbuf, uint32_t len);
   void slowSPIwrite(uint8_t c);
-
-
 
 
   //volatile uint8_t *dcport;

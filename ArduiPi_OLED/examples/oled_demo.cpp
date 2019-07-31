@@ -21,6 +21,7 @@ All text above, and the splash screen must be included in any redistribution
 						the command line (no more #define on compilation needed)
 						ArduiPi project documentation http://hallard.me/arduipi
 
+Overwritten by Seung-Gu Kang (oled_demo class) ( July, 2019 )
 						
 *********************************************************************/
 
@@ -63,13 +64,18 @@ struct s_opts
 	int verbose = false;
 }opts;
 
+
 void startPageMode(void);
 void runMode(void);
 
-void batteryCheck(void);
-void lowBattery(void);
+void batteryDisplay(void);
+void chargingDisplay(void);
 
+void lowBatteryCheck(void);
+void batteryCheck(void);
 void chargeCheck(void);
+
+void pinStateUpdate(void);
 
 void pinN_handler(void);
 void initializePinN(void);
@@ -111,30 +117,20 @@ int main(int argc, char **argv)
 	initializePinIN();
 	
 	while(1){
+		
 		startPageMode();
 			
 		runMode();
 		
-	//	chargeCheck();
-	//	batteryCheck();	
-			
+		pinStateUpdate();
+		
+		//lowBatteryCheck();	
+		//batteryCheck();	
+		//chargeCheck();
+		
 		delay(30);
 	}
 	
-/*
-	// text display tests
-	display.setTextSize(1);
-	display.setTextColor(WHITE);
-	display.setCursor(0,0);
-	display.print("Hello, world!\n");
-	display.setTextColor(BLACK, WHITE); // 'inverted' text
-	display.printf("%f\n", 3.141592);
-	display.setTextSize(2);
-	display.setTextColor(WHITE);
-	display.printf("0x%8X\n", 0xDEADBEEF);
-	display.display();
-	sleep(2); 
-*/
 	
 	display.clearDisplay();
 	display.display();
@@ -150,6 +146,7 @@ void startPageMode(void)
 	if(!updateScreen_flag) return;
 	
 	display.clearDisplay();
+	display.setCursor(0,8);
 	
 	char* text_op[NUM_MENU] = {
 			"Execute Programm\n",
@@ -158,28 +155,80 @@ void startPageMode(void)
 			"System down\n"
 		};
 	
-	display.setCursor(0,0);
-	for(int i=0; i<NUM_MENU; i++){
+	for(int item=0; item<NUM_MENU; item++){
 		char text[25];
 		
-		if(mode_state == i)
-			sprintf(text, "%s%s", "-> ", text_op[i]);
+		if(mode_state == item)
+			sprintf(text, "%s%s", "-> ", text_op[item]);
 		else
-			sprintf(text, "%s%s", "   ", text_op[i]);
+			sprintf(text, "%s%s", "   ", text_op[item]);
 			
 		display.setTextSize(1);
 		display.setTextColor(WHITE);
-	
+		
 		display.printf("%s", text);
 	}
 		
-	display.display();
-	
 	printf("state : %d\n", mode_state);
+	
+	batteryDisplay();
+	chargingDisplay();
+	
+	display.display();
 	
 	updateScreen_flag = 0;
 	//start_page_flag = 0;
 }
+
+void batteryDisplay(void)
+{
+	int state = 1;
+	//battery level
+	// state : 0 (<3.2v), 1(3.2~3.4v), 2(3.4~3.6v), 3(3.6~3.8v), 4(>3.8v)
+	if(digitalRead(lowBatPin) == 1){	// < 3.2V
+		state = 0;
+	}else{
+		if(digitalRead(battery0) == 1)	
+			state++;
+		if(digitalRead(battery1) == 1)
+			state+=2;
+	}
+	display.setCursor(0,0);
+	
+	int bat_pos_x = 107;	
+	// battery gauge
+	display.setBuffer(bat_pos_x, 0, 0x7e);
+	display.setBuffer(bat_pos_x+1, 0, 0x81);	
+	for(int gauge=1; gauge<=4; gauge++){
+		if(gauge <= state){	// infill gauge
+			display.setBuffer(bat_pos_x+gauge*3-1, 0, 0xbd);
+			display.setBuffer(bat_pos_x+gauge*3, 0, 0xbd);
+		}else{			// empty gauge
+			display.setBuffer(bat_pos_x+gauge*3-1, 0, 0x81);
+			display.setBuffer(bat_pos_x+gauge*3, 0, 0x81);
+		}
+		display.setBuffer(bat_pos_x+gauge*3+1, 0, 0x81);	
+	}
+	display.setBuffer(bat_pos_x+14, 0, 0x7e);
+	display.setBuffer(bat_pos_x+15, 0, 0x18);
+}
+
+void chargingDisplay()
+{
+	int lightening_pos_x = 124;
+	if(digitalRead(chargePin)){
+		display.setBuffer(lightening_pos_x, 0, 0x48);
+		display.setBuffer(lightening_pos_x+1, 0, 0x3c);
+		display.setBuffer(lightening_pos_x+2, 0, 0x1e);
+		display.setBuffer(lightening_pos_x+3, 0, 0x09);
+	}else{
+		display.setBuffer(lightening_pos_x, 0, 0x00);
+		display.setBuffer(lightening_pos_x+1, 0, 0x00);
+		display.setBuffer(lightening_pos_x+2, 0, 0x00);
+		display.setBuffer(lightening_pos_x+3, 0, 0x00);
+	}
+}
+
 
 void runMode(void)
 {
@@ -242,44 +291,53 @@ void chargeCheck(void)
 
 void batteryCheck(void)
 {
-	lowBattery();
-	
-	int state = 0;
-	if(digitalRead(battery0) == 1)
-		state++;
-	if(digitalRead(battery1) == 1)
-		state+=2;
+	int state = 1;
+	//battery level
+	// state : 0 (<3.2v), 1(3.2~3.4v), 2(3.4~3.6v), 3(3.6~3.8v), 4(>3.8v)
+	if(digitalRead(lowBatPin) == 1){	// < 3.2V
+		state = 0;
+	}else{
+		if(digitalRead(battery0) == 1)	
+			state++;
+		if(digitalRead(battery1) == 1)
+			state+=2;
+	}
 		
 	switch(state)
 	{
-	case 0:	//0~25%
+	case 0:	//0%
+		printf("Battery : |    |\n");
+		break;
+	case 1:	//0~25% 
 		printf("Battery : |*   |\n");
 		break;
-	case 1:
+	case 2:
 		printf("Battery : |**  |\n");
 		break;
-	case 2:
+	case 3:
 		printf("Battery : |*** |\n");
 		break;
-	case 3:
+	case 4:
 		printf("Battery : |****|\n");
 		break;
 	}
 }
 
 // if the voltage drops under 3.2V, xmc sends 'HIGH' to gpio.1
-void lowBattery(void)
+void lowBatteryCheck(void)
 {
 	static int batCount = 0;
+	
 	if(digitalRead(lowBatPin) == 1){
 		batCount++;
 		if(batCount > 100){
-			char text[] = "Battery is too low! It will be shut down soon\n";
+		/*	char text[] = "Battery is too low! It will be shut down soon\n";
 			display.setCursor(0,0);
 			display.setTextSize(1);
 			display.setTextColor(WHITE);
 			display.printf("%s", text);
-			
+			display.display();
+		*/	
 			printf("Battery is too low! It will be shut down soon\n");
 			batCount = 0;
 			
@@ -294,6 +352,26 @@ void lowBattery(void)
 		batCount = 0;
 }
 
+
+void pinStateUpdate(void)
+{
+	// pre-state of pin values.
+	static int pre_state_pins[4];
+	// current state of pin values -> charge, lowBat, bat0, bat1
+	int state_pins[4] = {
+		digitalRead(chargePin), 
+		digitalRead(lowBatPin),
+		digitalRead(battery0),
+		digitalRead(battery1)
+	};
+		
+	for(int i=0; i<4; i++){
+		if(pre_state_pins[i] != state_pins[i])
+			if(!runProgram_flag)
+				updateScreen_flag = 1;
+		pre_state_pins[i] = state_pins[i];
+	}
+}
 
 
 
@@ -358,5 +436,5 @@ void pinIN_handler(void)
 		printf("end\n");
 		exit(1);
 	}
-		
 }
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLibsKeyMotion_v1b.a  CMakeFiles/LibsKeyMotion_v1b.dir/main.cpp.o
+/usr/bin/ranlib libLibsKeyMotion_v1b.a

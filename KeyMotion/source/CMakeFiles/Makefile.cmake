@@ -12,7 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.7.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.7.2/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "cpp/KeyMotion/KeyMotion_v1b/CMakeLists.txt"
+  "cpp/KeyMotion/KeyMotion_v1c/CMakeLists.txt"
+  "cpp/KeyMotion/KeyMotion_v2a/CMakeLists.txt"
   "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
@@ -47,11 +48,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/LibsKeyMotion_v1b.dir/DependInfo.cmake"
-  "cpp/KeyMotion/KeyMotion_v1b/CMakeFiles/KeyMotion_v1b.dir/DependInfo.cmake"
+  "cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/LibsKeyMotion_v2a.dir/DependInfo.cmake"
+  "cpp/KeyMotion/KeyMotion_v2a/CMakeFiles/KeyMotion_v2a.dir/DependInfo.cmake"
+  "cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/LibsKeyMotion_v1c.dir/DependInfo.cmake"
+  "cpp/KeyMotion/KeyMotion_v1c/CMakeFiles/KeyMotion_v1c.dir/DependInfo.cmake"
   )
