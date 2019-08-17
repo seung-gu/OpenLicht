@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLibsOpenLicht_v3d.a  CMakeFiles/LibsOpenLicht_v3d.dir/main.cpp.o
+/usr/bin/ranlib libLibsOpenLicht_v3d.a

@@ -1,0 +1,22 @@
+
+
+watch version
+
+
+## version 3d ##
+
+modified ->
+
+battery gauge, sound on/off
+
+
+## version 4a ##  (not yet changed)
+
+modified ->
+
+preprocessing : more sophisticated
+
+histogram : more sophisticated, setting range
+
+MAX_DEPTH 0.5 -> 1.0
+

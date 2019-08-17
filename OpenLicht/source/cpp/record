@@ -1,0 +1,10 @@
+2019/08/01
+
+OpenLicht_v3e 
+
+-> trying to modify preprocessing function.
+  Figured out pow() function takes much longer than linear approximation.
+  It would be better to fine a correct coefficient in MAX_DEPTH=0.5,
+  and find the approximation according to this new coeff.
+
+		
